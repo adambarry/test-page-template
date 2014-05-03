@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>{Component name} Test Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if IE)><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif[-->
+        <link rel="stylesheet" href="test.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+
+        <style type="text/css">
+            /*
+                apply a natural box layout model to all elements
+                Source: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+            */
+
+            *,
+            *:before,
+            *:after {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+             }
+        </style>
+
+        <!-- SyntaxHighlighter -->
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.css" />
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shAutoloader.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    </head>
+    <body>
+
+        <article class="test test--constrain-width test--show-classes- test--grids">
+            <h1>{Component name} Test Page</h1>
+
+            <div class="test-callout test-callout--warning">
+                <h4>Natural Box Model used</h4>
+                <p>This page uses the CSS <code>box-sizing: border-box</code> model. If, for any reason, you don't want to use this, please remove it from the <code>head</code> section of the HTML.</p>
+            </div>
+
+            <p>Nice introduction to the component goes here. You can <span class="highlight">highlight</span> various things that you want to emphasize, or things that you want to <span class="highlight highlight--danger">warn</span> about.</p>
+            <p>You can also display the <code>code</code> for the components with syntaxhighlighting:</p>
+
+            <script type="syntaxhighlighter" class="brush: html"><![CDATA[
+
+                <!-- Code Example: -->
+                <button class="btn btn--modifier">Button Text</button>
+
+            ]]></script>
+
+
+            <div class="test-section">
+                <h2>Test Callouts</h2>
+
+                <div class="test-callout test-callout--info">
+                    <p>This callout contains general information about the <code>html</code> component.</p>
+                </div>
+
+                <div class="test-callout test-callout--interface">
+                    <p>This callout contains interface information about the <code>html</code> component.</p>
+                </div>
+
+                <div class="test-callout test-callout--warning">
+                    <p>This callout contains warnings about the <code>html</code> component, e.g. if certain modifications have been made to the example in order to display the desired functionality.</p>
+                </div>
+
+                <div class="test-callout test-callout--danger">
+                    <p>This callout contains alerts about the <code>html</code> component, e.g. if certain modifications makes the code break.</p>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>Button toolkit (demonstration)</h2>
+
+                <p>To give a sensible example of what to do with a test-page like this this <code>test-section</code> contains an example of a button toolkit, in which all of the various button types are displayed in their possible states. This way, you always have a way of viewing all of the possible states for each button type without having to interact with the buttons first.</p>
+
+                <div class="test-callout test-callout--warning">
+                    <h4><code>data-state</code> attributes added to simulate states</h4>
+                    <p>In the following test-cases <code>data-state</code> attributes have been added to the appropriate elements in order to permanently display various states for the <code>.btn</code> element, e.g. <code>hover</code>, <code>focus</code> and <code>active</code>.</p>
+                </div>
+
+                <div class="test-callout test-callout--warning">
+                    <h4>Style definition inlined</h4>
+                    <p>In order to make this test-page (of a test-page) self-contained the style definitions for the below example have been inlined within the <code>text-section</code> itself. Under normal circumstances, I would recommend keeping style definitions in an external CSS file.</p>
+                </div>
+
+
+                <style type="text/css">
+
+                    /*: Standard button
+                    *******************************************************************************/
+
+                    .btn {
+                        border-radius: 4px;
+                        border: 1px solid #a7a7a7;
+                        padding: 2px 4px;
+                        background-color: #a7a7a7;
+                        color: white;
+                    }
+
+                    .btn:hover,
+                    .btn[data-state="hover"] {
+                        background-color: #c0c0c0;
+                    }
+
+                    .btn:focus,
+                    .btn[data-state="focus"] {
+                        border-color: #c0c0c0;
+                        outline: 0;
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                    }
+
+                    .btn:active,
+                    .btn[data-state="active"] {
+                        background-color: #8c8c8c;
+                    }
+
+                    [disabled] .btn,
+                    .btn[disabled] {
+                        background-color: #a7a7a7;
+                        outline: none;
+                        opacity: .6;
+                        cursor: default;
+                        pointer-events: none;
+                   }
+
+
+                    /*: Primary button
+                    *******************************************************************************/
+
+                   .btn--primary,
+                   [disabled] .btn--primary,
+                   .btn--primary[disabled] {
+                       border-color: #2464a7;
+                       background-color: #2464a7;
+                   }
+
+                    .btn--primary:hover,
+                    .btn--primary[data-state="hover"] {
+                        background-color: #4c88c8;
+                    }
+
+                    .btn--primary:active,
+                    .btn--primary[data-state="active"] {
+                        background-color: #1a518a;
+                    }
+
+                </style>
+
+
+                <h3>Standard button</h3>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>btn</code> class added to the <code>&lt;button&gt;</code> element. No buttons should be used without the <code>btn</code> class.</p>
+                </div>
+
+
+                <div class="test-example">
+                    <button type="button" class="btn">Button</button>
+                    <button type="button" class="btn" data-state="hover">Button :hover</button>
+                    <button type="button" class="btn" data-state="focus">Button :focus</button>
+                    <button type="button" class="btn" data-state="active">Button :active</button>
+                    <button type="button" class="btn" disabled="disabled">Button (disabled)</button>
+                </div>
+
+
+                <h3>Primary button</h3>
+
+                <div class="test-callout test-callout--interface">
+                    <p><code>btn--primary</code> modifier class added to the <code>btn</code> element.</p>
+                </div>
+
+                <div class="test-example">
+                    <button type="button" class="btn btn--primary">Button</button>
+                    <button type="button" class="btn btn--primary" data-state="hover">Button :hover</button>
+                    <button type="button" class="btn btn--primary" data-state="focus">Button :focus</button>
+                    <button type="button" class="btn btn--primary" data-state="active">Button :active</button>
+                    <button type="button" class="btn btn--primary" disabled="disabled">Button (disabled)</button>
+                </div>
+            </div>
+
+
+        </article>
+
+        <script type="text/javascript">
+            if (SyntaxHighlighter) {
+                SyntaxHighlighter.all();
+            }
+        </script>
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </body>
+</html>
